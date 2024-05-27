@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+.title {
+  text-transform: uppercase;
+  font-family: sans-serif;
+
+}
+
+.container {
+  overflow: visible;
+  width: 75%;
+  padding: 20px;
+
+}
+
+.text-content {
+  width: 20vw;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: sans-serif;
+  min-height: 65vh;
+}
+
+.link {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 8vh;
+  font-family: sans-serif;
+  font-size: 19px;
+  border: 4px solid rgb(53, 0, 211);
+}
+
+.page {
+  padding: 15px 30px;
+  min-height: calc(100vh - 30px);
+  overflow:hidden
+}
+
+.content {
+  display: flex;
+  gap: 5%;
+}
