@@ -49,3 +49,10 @@ html {
   display: flex;
   gap: 5%;
 }
+
+
+@media (width < 1024px) {
+  .page {
+    width: 1024px;
+  }
+}
