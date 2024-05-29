@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
 }
 
 .info {
@@ -12,7 +20,7 @@ html {
 .title {
   text-transform: uppercase;
   font-family: sans-serif;
-
+  min-height: 55px;
 }
 
 .container {
@@ -47,7 +55,7 @@ html {
 
 .page {
   padding: 15px 30px;
-  min-height: calc(100vh - 30px);
+  height: calc(100vh);
   
 }
 
