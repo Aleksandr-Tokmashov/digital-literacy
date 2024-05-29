@@ -81,3 +81,8 @@ body {
   display: none;
 }
 }
+
+#myChart8 .apexcharts-heatmap-series path:nth-child(2) {
+  opacity: 0;
+  pointer-events: none;
+}

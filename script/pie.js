@@ -1,5 +1,5 @@
-var ctx6 = document.getElementById('myChart6').getContext('2d');
-var myChart6 = new Chart(ctx6, {
+var ctx9 = document.getElementById('myChart9').getContext('2d');
+var myChart9 = new Chart(ctx9, {
     type: 'doughnut',
     data: {
         labels: ['Не смогли назвать ни одну киберугрозу', 'Компьютерные вирусы', 'Взлом аккаунтов', 'Телефонное мошнничество', 'Другое'],

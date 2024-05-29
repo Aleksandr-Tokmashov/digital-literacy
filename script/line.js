@@ -14,7 +14,7 @@ const data = {
     ]
 };
 
-const config = {
+const config2 = {
     type: 'line',
     data: data,
     options: {
@@ -108,4 +108,4 @@ const config = {
     },
 };
 
-const myChart = new Chart(ctx2, config);
+const myChart = new Chart(ctx2, config2);
