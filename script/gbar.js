@@ -86,7 +86,7 @@ new Chart(ctx3, {
                 color: 'blue',
                 font: {
                     weight: 'bold',
-                    size: 18
+                    size: 16
                 },
                 formatter: function (value, context) {
                     return value;

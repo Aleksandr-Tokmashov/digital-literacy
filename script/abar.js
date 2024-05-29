@@ -1,8 +1,8 @@
-const ctx4 = document.getElementById('myChart4');
+const ctx6 = document.getElementById('myChart6');
 
 
 Chart.register(ChartDataLabels);
-new Chart(ctx4, {
+new Chart(ctx6, {
     type: 'bar',
     data: {
         labels: ['<10 лет', '10-13 лет', '14-17 лет', '18-25 лет', 
