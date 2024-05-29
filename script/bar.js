@@ -14,7 +14,7 @@ new Chart(ctx, {
             label: 'Уровень цифровой грамотности',
             data: [6.73, 6.65, 6.56, 6.45, 6.44, 6.38, 6.36, 6.28, 6.09],
             backgroundColor: 'rgba(53, 0, 211, 0.7)',
-            borderColor: 'rgb(53, 0, 211)',
+
             borderWidth: 1
         }]
     },
@@ -23,7 +23,7 @@ new Chart(ctx, {
         scales: {
             x: {
                 display: false,
-                max: 7.5 // установи максимальное значение, которое хочешь отобразить
+                max: 7.5 
             },
             y: {
                 ticks: {
@@ -41,7 +41,7 @@ new Chart(ctx, {
             usePointStyle: true,
             callbacks: { 
 
-              
+
               afterLabel: (data) => { 
                 return `Цифровое потребление: ${regions[data.parsed.y][0]}
 Цифровые компентенции: ${regions[data.parsed.y][1]}

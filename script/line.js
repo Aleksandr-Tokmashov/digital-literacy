@@ -1,4 +1,5 @@
 const ctx2 = document.getElementById('myChart2').getContext('2d');
+const dif2 = [52 - 52, 58 - 52, 64 - 58, 71 - 64, 71 - 71]
 
 const data = {  
     labels: [2018, 2019, 2020, 2021, 2022, 2023],
@@ -61,6 +62,30 @@ const config = {
             }]
         },
       plugins: {
+        tooltip: {
+            enabled: true,
+            usePointStyle: true,
+            callbacks: { 
+
+
+              label: (data) => { 
+                return `${data.dataset.label}: ${data.parsed.y}%`
+              },
+              afterLabel: (data) => { 
+                if (data.parsed.x == 0) {
+                    return ``}
+                else {
+                    const difVal = dif2[data.parsed.x-1];
+                    if (difVal == 0) {return `
+Не изменился по отношению к прошлому году`}
+                    else if (difVal > 0) {return `
+Увеличился на ${difVal}% потношению к прошлому году `}
+                    else if (difVal < 0) {return `
+Уменьшился на ${difVal * (-1)}% по отношению к прошлому году`}
+                }
+              },
+            },
+          },
         datalabels: {
 
             font: {
