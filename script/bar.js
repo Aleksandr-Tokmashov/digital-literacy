@@ -13,9 +13,9 @@ new Chart(ctx, {
         datasets: [{
             label: 'Уровень цифровой грамотности',
             data: [6.73, 6.65, 6.56, 6.45, 6.44, 6.38, 6.36, 6.28, 6.09],
-            backgroundColor: 'rgba(53, 0, 211, 0.7)',
+            backgroundColor: 'rgb(24, 84, 216, 0.9)',
 
-            borderWidth: 1
+
         }]
     },
     options: {
@@ -55,7 +55,7 @@ new Chart(ctx, {
             datalabels: {
                 anchor: 'end',
                 align: 'end',
-                color: 'blue',
+                color: 'rgb(24, 84, 216)',
                 font: {
                     weight: 'bold',
                     size: 18

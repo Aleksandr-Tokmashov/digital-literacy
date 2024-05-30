@@ -10,18 +10,18 @@ new Chart(ctx3, {
             {
                 label: 'Начальный уровень',
                 data: [7, 3, 2], 
-                backgroundColor: 'rgba(20, 192, 235, 0.8)',
+                backgroundColor: 'rgba(20, 192, 235, 0.9)',
                 borderWidth: 1
             },
             {
                 label: 'Базовый уровень',
                 data: [66,70,69],
-                backgroundColor: 'rgba(9, 103, 174, 0.8)',
+                backgroundColor: 'rgba(24, 84, 216, 0.9)',
                 borderWidth: 1
             },
             {
                 label: 'Продвинутый уровень',
-                backgroundColor: 'rgba(75, 29, 159, 0.8)',
+                backgroundColor: 'rgba(75, 29, 159, 0.9)',
                 data: [27, 27, 29],
                 borderWidth: 1
             }

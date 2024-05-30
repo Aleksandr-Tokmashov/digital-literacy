@@ -19,7 +19,7 @@ new Chart(ctx5, {
             {
                 label: 'Информационная безопасность',
                 data: [59, 67, 74, 73], 
-                backgroundColor: 'rgba(9, 103, 174, 0.9)',
+                backgroundColor: 'rgba(24, 84, 216, 0.9)',
                 borderWidth: 1
             },
             {

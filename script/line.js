@@ -1,22 +1,23 @@
 const ctx2 = document.getElementById('myChart2').getContext('2d');
 const dif2 = [52 - 52, 58 - 52, 64 - 58, 71 - 64, 71 - 71]
 
-const data = {  
+const data1 = {  
     labels: [2018, 2019, 2020, 2021, 2022, 2023],
     datasets: [
       {
         label: 'Индекс цифровой грамотности',
         data: [52, 52, 58, 64, 71, 71],
-        borderColor: 'blue',
-        backgroundColor: 'rgba(0, 0, 255)',
-        fill: false
+        borderColor: 'rgb(24, 84, 216)',
+        backgroundColor: 'rgb(24, 84, 216)',
+        fill: false,
+
       }
     ]
 };
 
 const config2 = {
     type: 'line',
-    data: data,
+    data: data1,
     options: {
         elements: {
             point: {
