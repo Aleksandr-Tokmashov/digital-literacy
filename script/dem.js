@@ -5,7 +5,7 @@ const data7 = {
     {
       label: 'Мужчины',
       data: [61.3, 60.8, 62.1, 74.6, 73.2, 70.7, 62.8],
-      backgroundColor: '#4E1ADF',
+      backgroundColor: 'rgba(24, 84, 216)',
     },
     {
       label: 'Женщины',

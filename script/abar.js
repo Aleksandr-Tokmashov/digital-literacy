@@ -10,8 +10,8 @@ new Chart(ctx6, {
         datasets: [{
             label: 'Уровень цифровой грамотности',
             data: [60.6 , 62.4, 63.8, 64.1, 69.6, 67.3, 66.4, 61.9],
-            backgroundColor: 'rgba(53, 0, 211, 0.7)',
-            borderColor: 'rgb(53, 0, 211)',
+            backgroundColor: 'rgba(24, 84, 216, 0.9)',
+            borderColor: 'rgb(24, 84, 216)',
             borderWidth: 1
         }]
     },

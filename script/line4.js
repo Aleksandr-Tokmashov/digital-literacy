@@ -8,22 +8,22 @@ const data4 = {
       {tension: 0.2,
         label: 'Цифровое потребление',
         data: [7.81, 6.86, 7.37, 6.98, 6.46],
-        borderColor: 'rgba(20, 192, 235, 0.9)',
-        backgroundColor:'rgba(20, 192, 235, 0.9)',
+        borderColor: 'rgba(20, 192, 235)',
+        backgroundColor:'rgba(20, 192, 235)',
         fill: false
       },
       {tension: 0.2,
         label: 'Цифровая безопасность',
         data: [6.7, 7.47, 6.87, 6.8, 6.84],
-        borderColor: 'rgba(9, 103, 174, 0.9)',
-        backgroundColor: 'rgba(9, 103, 174, 0.9)',
+        borderColor: 'rgba(24, 84, 216)',
+        backgroundColor: 'rgba(24, 84, 216)',
         fill: false
       },
       {tension: 0.2,
         label: 'Цифровые компетенции',
         data: [7.06, 7.2, 6.45, 6.3, 6.0],
-        borderColor: 'rgba(75, 29, 159, 0.9)',
-        backgroundColor: 'rgba(75, 29, 159, 0.9)',
+        borderColor: 'rgba(75, 29, 159)',
+        backgroundColor: 'rgba(75, 29, 159)',
         fill: false
       },
     ]
@@ -83,7 +83,7 @@ const config4 = {
 
 
               label: (data) => { 
-                return `${data.dataset.label}: ${data.parsed.y}%`
+                return `${data.dataset.label}: ${data.parsed.y}`
               },
               afterLabel: (data) => { 
                 if (data.parsed.x == 0) {
@@ -93,9 +93,9 @@ const config4 = {
                     if (difVal == 0) {return `
 Не изменился по отношению к прошлому году`}
                     else if (difVal > 0) {return `
-Увеличился на ${difVal}% потношению к прошлому году `}
+Увеличился на ${difVal} потношению к прошлому году `}
                     else if (difVal < 0) {return `
-Уменьшился на ${difVal * (-1)}% по отношению к прошлому году`}
+Уменьшился на ${difVal * (-1)} по отношению к прошлому году`}
                 }
               },
             },
