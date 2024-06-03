@@ -72,6 +72,8 @@ html {
 }
 
 .content {
+  border: 0;
+  outline: 0;
   height: calc(88vh - 40px);
   display: flex;
   gap: 5%;
@@ -109,7 +111,9 @@ html {
 
 #myChart8 > div > div > svg:nth-child(1) {
   background: var(--background-color) !important;
-  color: white
+  color: white;
+  border: 0;
+  outline: 0;
 }
 
 .theme-menu__list {

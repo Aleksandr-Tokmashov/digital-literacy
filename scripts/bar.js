@@ -43,7 +43,8 @@ new Chart(ctx, {
             },
             y: {
                 grid: {
-                    color:  colorLine},
+                    display: true,
+                    color:  gridc},
                 ticks: {
                     
                     color: xy,
