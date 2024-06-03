@@ -43,16 +43,25 @@ const options7 = {
   
      },
     legend: {
+
+        labels: {
+          font: {
+            size: 16
+        },
+          color: legendc
+      },
+      
       position: "bottom",
     },
   },
   responsive: true,
   scales: {
      x: {
-
+      grid: {
+        color: gridc },
       stacked: false,
       ticks: {
-        color: 'black',
+        color: xy,
                   font: {
                       size: 16,
                       weight: 'bold'
@@ -64,10 +73,11 @@ const options7 = {
       },
      },
     y: {
-      
+      grid: {
+        color: gridc },
        stacked: true,
       ticks: {
-        color: 'black',
+        color: xy,
                   font: {
                       size: 16,
                       weight: 'bold'

@@ -44,7 +44,8 @@ fetch('aaa.json').then((r) => r.json()).then((data) => {
           axis: 'x',
           projection: 'equalEarth'
         }
-      }
+      },
+      
     }
   });
 });

@@ -1,0 +1,40 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+
+:root.theme-dark {
+  --line-color: rgb(0, 238, 235);
+  --background-color: rgb(37,36,37);
+  --accent-color: rgb(0, 238, 235);
+  --grid-color: rgba(255, 255, 255, 0.2);
+  --datalabel: rgb(0, 149, 255);
+  --xy: rgb(0, 149, 255);
+  --bar: rgb(0, 149, 255);
+  --link: rgb(0, 149, 255);
+  --text: rgb(0, 210, 238);
+  --legend: white;
+ 
+}
+
+:root.theme-light {
+  --grid-color: rgba(0, 0, 0, 0.25);
+  --datalabel: rgb(24, 84, 216);
+  --background-color: #FFFFFF;
+  --bar: rgb(24, 84, 216);
+  --line-color: rgb(24, 84, 216);
+  --link: rgb(24, 84, 216);
+  --xy: black;
+  --legend: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000000;
+    --accent-color: rgba(20, 192, 235, 0.9);
+    
+  }
+}
+
