@@ -12,6 +12,7 @@ html {
 }
 
 .body {
+  position: relative;
   margin: 0;
   background-color: var(--background-color);
   color: var(--accent-color);
