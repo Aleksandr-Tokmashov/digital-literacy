@@ -5,6 +5,20 @@ const regions = [[6.74, 6.35, 7.09], [6.62, 6.3, 7.05],
                  [6.38, 5.9, 6.82], [6.39, 5.87, 6.59], 
                  [6.17, 5.67, 6.43]]
 
+pelement = document.querySelector('.body');
+pstyle = window.getComputedStyle(pelement);
+colorValue = pstyle.getPropertyValue('color');
+colorLine = pstyle.getPropertyValue('background-color');
+lineColor = pstyle.getPropertyValue('border-color');
+dlabel =  pstyle.getPropertyValue('outline-color');
+
+gelement = document.querySelector('.grid');
+gstyle = window.getComputedStyle(gelement);
+gridc = gstyle.getPropertyValue('color');
+xy = gstyle.getPropertyValue('background-color')
+barc = gstyle.getPropertyValue('border-color')
+legendc = gstyle.getPropertyValue('outline-color')
+
 Chart.register(ChartDataLabels);
 new Chart(ctx, {
     type: 'bar',
@@ -22,12 +36,17 @@ new Chart(ctx, {
         indexAxis: 'y',
         scales: {
             x: {
+                grid: {
+                    color: gridc },
                 display: false,
                 max: 7.5 
             },
             y: {
+                grid: {
+                    color:  colorLine},
                 ticks: {
-                    color: 'black',
+                    
+                    color: xy,
                     font: {
                         size: 18,
                         weight: 'bold'
@@ -50,12 +69,15 @@ new Chart(ctx, {
             },
           },
             legend: {
-                display: false
+                display: false,
+                labels: {
+                    color: legendc
+                }
             },
             datalabels: {
                 anchor: 'end',
                 align: 'end',
-                color: 'rgb(24, 84, 216)',
+                color: dlabel,
                 font: {
                     weight: 'bold',
                     size: 18

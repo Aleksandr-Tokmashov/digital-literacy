@@ -1,5 +1,8 @@
 const ctx2 = document.getElementById('myChart2').getContext('2d');
-const dif2 = [52 - 52, 58 - 52, 64 - 58, 71 - 64, 71 - 71]
+const dif2 = [52 - 52, 58 - 52, 64 - 58, 71 - 64, 71 - 71];
+const dif22 = [52 - 52, 58 - 52, 64 - 52, 71 - 52, 71 - 52];
+
+
 
 const data1 = {  
     labels: [2018, 2019, 2020, 2021, 2022, 2023],
@@ -7,8 +10,8 @@ const data1 = {
       {
         label: 'Индекс цифровой грамотности',
         data: [52, 52, 58, 64, 71, 71],
-        borderColor: 'rgb(24, 84, 216)',
-        backgroundColor: 'rgb(24, 84, 216)',
+        borderColor: lineColor,
+        backgroundColor: lineColor,
         fill: false,
 
       }
@@ -28,10 +31,12 @@ const config2 = {
         scales: {
          
             y: {
+                grid: {
+                    color: gridc },
                 min: 40,
                 max: 80,
                 ticks: {
-                    color: 'black',
+                    color: xy,
                     font: {
                         size: 17,
                         weight: 'bold'
@@ -47,9 +52,10 @@ const config2 = {
                 
             },
             x: {
-               
+                grid: {
+                    color: gridc },
                 ticks: {
-                    color: 'black',
+                    color: xy,
                     font: {
                         size: 17,
                         weight: 'bold'
@@ -61,7 +67,9 @@ const config2 = {
                     beginAtZero: true
                 }
             }]
+            
         },
+
       plugins: {
         tooltip: {
             enabled: true,
@@ -77,12 +85,25 @@ const config2 = {
                     return ``}
                 else {
                     const difVal = dif2[data.parsed.x-1];
-                    if (difVal == 0) {return `
+                    const difVal2 = dif22[data.parsed.x-1];
+                    var t1 = '';
+                    var t2= '';
+                    if (difVal == 0) {t1 = `
 Не изменился по отношению к прошлому году`}
-                    else if (difVal > 0) {return `
+                    else if (difVal > 0) {t1 = `
 Увеличился на ${difVal}% потношению к прошлому году `}
-                    else if (difVal < 0) {return `
+                    else if (difVal < 0) {t1 = `
 Уменьшился на ${difVal * (-1)}% по отношению к прошлому году`}
+                    
+                    
+                    if (difVal2 == 0) {t2 = `
+Остался на уровне 2018 года`}
+                    else if (difVal2 > 0) {t2 = `
+С 2018 года увеличился на ${difVal2}%`}
+                    else if (difVal2 < 0) {t2 = `
+С 2018 года уменьшился на ${difVal2 * (-1)}% `}
+
+                return t1+t2
                 }
               },
             },

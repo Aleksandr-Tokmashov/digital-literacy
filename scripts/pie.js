@@ -6,6 +6,8 @@ var myChart9 = new Chart(ctx9, {
         labels: ['Не смогли назвать ни одну киберугрозу', 'Назвали 1-2 угрозы', 'Назвали 3-4 угрозы', 'Назвали 5-6 угроз', 'Смогли назвать более 6 угроз'],
         datasets: [{
             label: '# of Votes',
+            borderColor: colorLine, 
+
             data: [41, 20, 19, 16, 4],
             backgroundColor: [
                 'rgb(12, 34, 81)',
@@ -34,13 +36,15 @@ var myChart9 = new Chart(ctx9, {
                 },
               }},
           legend: {
+
             display: true,
             position: 'right',
             labels: {
                 font: {
-                    size: 20,
-                    color: 'black'
-                }
+                    size: 18
+                },
+                color: legendc
+
             }
         },
             datalabels: {

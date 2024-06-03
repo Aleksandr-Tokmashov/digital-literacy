@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Line Chart Example with Chart.js</title>
-<link rel="stylesheet" href="style.css"> 
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="./styles/variables.css">
+<link rel="stylesheet" href="./styles/themes.css">
+<script src="./scripts/set-theme.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -13,58 +16,84 @@
 <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
 
 </head>
-<body>
-    
+<body class="body">
+    <header>
+    <nav class="theme-menu header__theme-menu">
+        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+        <ul class="theme-menu__list">
+          <li class="theme-menu__item">
+            <button type="button" data-theme="dark" class="theme-menu__button">
+              Темно
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button
+              type="button"
+              data-theme="auto"
+              disabled
+              class="theme-menu__button"
+            >
+              Авто
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button type="button" data-theme="light" class="theme-menu__button">
+              Светло
+            </button>
+          </li>
+        </ul>
+      </nav>
+      
     <div class="page" id="page2">
-        <h2 class="title" >ИНДЕКС ЦИФРОВОЙ ГРАМОТНОСТИ РОССИЯН ПО ГОДАМ (В ПРОЦЕНТНЫХ ПУНКТАХ)</h2>
+        <h2 class="title" >Изменение иНДЕКСа ЦИФРОВОЙ ГРАМОТНОСТИ РОССИЯН С 2018 года <br>(В ПРОЦЕНТНЫХ ПУНКТАХ)</h2>
         <div class='content'>
             <div class="container">
             <canvas id="myChart2"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Индекс цифровой грамотности россиян на момент 2023 года составил 71%, что является наивысшим показателем за весь период с 2018 по 2023 год. За 6 лет показатель увеличился на 19%.</p>
                 <a class='link' href="#page3">далее</a>
             </div>
         </div>
     </div>
 
     <div class="page" id="page3">
-        <h2 class="title" >Доля населения, обладающего разными уровнями цифровой грамотности<br>(в процентных пунктах)</h2>
+        <h2 class="title" >Доля населения, обладающего разными уровнями цифровой <br>грамотности (в процентных пунктах)</h2>
         <div class='content'>
             <div class="container">
             <canvas id="myChart3"></canvas></div>
             <div class="info">
                 <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют всего 2% россиян.</p>
                 <a class='link' href="#page4">далее</a>
             </div>
         </div>
     </div>
     
     <div class="page" id="page4">
-        <h2 class="title" >Среднее значение ключевых показателей цифровой грамотности по годам <br>(по шкале от 0 до 10)</h2>
+        <h2 class="title" >Оценка осведомлённости по ключевым показателям<br> цифровой грамотности в разные годы (по шкале от 0 до 10)</h2>
         <div class='content'>
             <div class="container">
             <canvas id="myChart4"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Показатели цифровых компетенций и знаний основ цифрового потребления в 2023 году являются наихудшими с 2019 года.
+                    Знания цифровой безопасности ни разу не опускались ниже показателя 2019 года. 
+                </p>
                 <a class='link' href="#page5">далее</a>
             </div>
         </div>
     </div>
     <div class="page" id="page5">
-        <h2 class="title" >Средние Индексы навыков прикладных цифровых компетенций по годам<br>(в процентных пунктах)</h2>
+        <h2 class="title" >Оценка прикладных умений в цифовой среде по годам<br>(по шкале от 0 до 100)</h2>
         <div class='content'>
             <div class="container">
             <canvas id="myChart5"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Навыки информационной безопасности, решения проблем в интернете и коммуникативной грамотности
+                    существенно увеличились с 2020 года и имеют довольно высокие показатели в последние годы.
+                </p>
                 <a class='link' href="#page9">далее</a>
             </div>
         </div>
@@ -75,20 +104,22 @@
             <div class="container">
             <canvas id="myChart9"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Уровень осведомленности граждан России о киберугрозах находится на довольно низком уровне. 
+                    Почти половина всех опрошенных не смогли назвать ни одной киберугрозы. Высокой осведомленностью обладают всего 4% опрошенных.
+                </p>
                 <a class='link' href="#page6">далее</a>
             </div>
         </div>
     </div>
     <div class="page" id="page6">
-        <h2 class="title" >Доля населения, обладающего разными уровнями цифровой грамотности<br>(в процентных пунктах)</h2>
+        <h2 class="title" >Уровень цифровой грамотности людей разных возрастных групп<br>(в процентных пунктах)</h2>
         <div class='content'>
             <div class="container">
             <canvas id="myChart6"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Наилучшими знаниями цифровой грамотности обладают люди от 26 до 35 лет. Чуть менее высоким уровнем владеют люди от 36 до 59 лет. 
+                    Наименее грамотными в цифровой среде являются люди старше 60 лет и младше 10 лет.
+                </p>
                 <a class='link' href="#page7">далее</a>
             </div>
         </div>
@@ -99,8 +130,7 @@
             <div class="container">
             <canvas id="myChart7"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Мужчины в возрасте от 26 до 59 лет обладают более существенными знаниями, чем женщины того же возраста. В остальных возрастных категориях женщины оцениваются на несколько пунктов выше мужчин.</p>
                 <a class='link' href="#page8">далее</a>
             </div>
         </div>
@@ -109,43 +139,43 @@
         <h2 class="title" >Средний индекс цифровой грамотности в регионах</h2>
         <div class='content'>
             <div class="container">
-            <div id="myChart8"></div></div>
+            <div style='background-color: blue' id="myChart8"></div></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">В тройку лучших регионов России по индексу цифровой грамотности вошли Республика Карелия (73.4%), Москва (73.4%) и Астраханская область (72.6%).
+                    Наименее высокие результаты у Чеченской Республики (50.1%), Тывы (52.8%) и Ингушетии (53.6%).
+                </p>
                 <a class='link' href="#page1">далее</a>
             </div>
         </div>
     </div>
     <div class="page" id="page1">
-        <h2 class="title" >СРЕДНИЙ УРОВЕНЬ ЦИФРОВОЙ ГРАМОТНОСТИ
+        <h2 class="title" >Оценка ЦИФРОВОЙ ГРАМОТНОСТИ
             НАСЕЛЕНИЯ в федеральных <br>округах РОССИИ, 2023 (по шкале от 0 до 10)</h2>
         <div class='content'>
             <div class="container">
             <canvas id="myChart" class="applyScript"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">Средний индекс цифровой грамотности всех округов России находится на неплохом уровне. Наиболее высокий результат у Северо-западного федерального округа, наименее - у Северо-Кавказского федерального округа.</p>
                 <a class='link' href="#page10">далее</a>
             </div>
         </div>
     </div>
-
+    <div class="grid"></div>
     
 
     
 
     
 
-    <script src="script/bar.js"></script>
-    <script src="script/line.js"></script>
-    <script src="script/line4.js"></script>
-    <script src="script/gbar.js"></script>
-    <script src="script/gbar5.js"></script>
-    <script src="script/abar.js"></script>
-    <script src="script/pie.js"></script>
-    <script src="script/dem.js"></script>
-    <script src="script/hot.js"></script>
+    <script src="scripts/bar.js"></script>
+    <script src="scripts/line.js"></script>
+    <script src="scripts/line4.js"></script>
+    <script src="scripts/gbar.js"></script>
+    <script src="scripts/gbar5.js"></script>
+    <script src="scripts/abar.js"></script>
+    <script src="scripts/pie.js"></script>
+    <script src="scripts/dem.js"></script>
+    <script src="scripts/hot.js"></script>
     
     
 
@@ -160,7 +190,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewporsat" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/themes.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
     <title>Document</title>
@@ -172,14 +204,14 @@
             <div class="container">
             <canvas id="canvas"></canvas></div>
             <div class="info">
-                <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
-                    Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют 2% россиян.</p>
+                <p class="text-content">По значению индекса цифровой грамотности среди всех стран Россия находится на 24 месте, такой же показатель у Франции и Омана. 
+                    Лидерами по показателю являются Сингапур (7.8), ОАЭ (7.5) и Финляндия (7.5).</p>
 
             </div>
         </div>
     </div>
     
-    <script src="script/map.js"></script>
+    <script src="scripts/map.js"></script>
 </body>
 </html>
 

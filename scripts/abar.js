@@ -10,7 +10,7 @@ new Chart(ctx6, {
         datasets: [{
             label: 'Уровень цифровой грамотности',
             data: [60.6 , 62.4, 63.8, 64.1, 69.6, 67.3, 66.4, 61.9],
-            backgroundColor: 'rgba(24, 84, 216, 0.9)',
+            backgroundColor: 'rgb(24, 84, 216)',
             borderColor: 'rgb(24, 84, 216)',
             borderWidth: 1
         }]
@@ -19,9 +19,10 @@ new Chart(ctx6, {
 
         scales: {
             x: {
-              
+              grid: {
+                color: gridc },
               ticks: {
-                  color: 'black',
+                  color: xy,
                   font: {
                       size: 18,
                       weight: 'bold'
@@ -29,10 +30,12 @@ new Chart(ctx6, {
               }
           },
             y: {
+              grid: {
+                color: gridc },
               min: 45,
               max: 75,
               ticks: {
-                color: 'black',
+                color: xy,
                 font: {
                     size: 18,
                     weight: 'bold'
@@ -41,7 +44,20 @@ new Chart(ctx6, {
             }
         },
         plugins: {
+          datalabels: {
+                anchor: 'end',
+                align: 'end',
+                color: dlabel,
+                font: {
+                    weight: 'bold',
+                    size: 18
+                },
+                formatter: function (value, context) {
+                    return value;
+                }
+            },
           tooltip: {
+            
             callbacks: { 
 
               title: function(context) {
