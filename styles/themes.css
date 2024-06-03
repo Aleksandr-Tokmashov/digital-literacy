@@ -7,7 +7,7 @@
 
 :root.theme-dark {
   --line-color: rgb(0, 238, 235);
-  --background-color: rgb(37,36,37);
+  --background-color:  rgb(17, 16, 21);
   --accent-color: rgb(0, 238, 235);
   --grid-color: rgba(255, 255, 255, 0.2);
   --datalabel: rgb(0, 149, 255);
@@ -32,8 +32,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #000000;
-    --accent-color: rgba(20, 192, 235, 0.9);
+    --line-color: rgb(0, 238, 235);
+    --background-color: rgb(17, 16, 21);
+    --accent-color: rgb(0, 238, 235);
+    --grid-color: rgba(255, 255, 255, 0.2);
+    --datalabel: rgb(0, 149, 255);
+    --xy: rgb(0, 149, 255);
+    --bar: rgb(0, 149, 255);
+    --link: rgb(0, 149, 255);
+    --text: rgb(0, 210, 238);
+    --legend: white;
     
   }
 }
