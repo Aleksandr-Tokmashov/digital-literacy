@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo"></script>
 
 </head>
-<body class="body">
+<body class="body" id='buttonId'>
     <header>
     <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -37,18 +37,51 @@
           </li>
         </ul>
       </nav>
-      
+      <div class="page" style='display: flex; flex-direction: column; justify-content: space-between;';>
+        <h2 class="title" style="font-size: 48px; color: var(--text); margin-bottom: 0" >Цифровая грамотность в России <br></h2>
+        <div style="display: flex; gap: 1%"><div class='content pic'></div><div class='content pic2'></div></div>
+        <div style="display: flex; justify-content: space-between;">
+            <p style="font-family: sans-serif; font-size: 20px; color: var(--text)">Группа: ШАД-111 /  ФИО: Токмашов Александр Евгеньевич</p>
+
+        </div>
+    </div>
+    <div class="page" style='display: flex; flex-direction: column; gap: 9%';>
+        <h2 class="title" style="font-size: 48px; color: var(--text); margin-bottom: 0" >Содержание <br></h2>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page2">1)</a> Изменение индекса цифровой грамотности росссиян за последние годы</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page3">2)</a> Доля населения, обладающего разными уровнями цифровой грамотности</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page4">3)</a> Оценка осведомлённости населенеия по ключевым показателям цифровой грамотности</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page5">4)</a> Оценкка прикладных умений в цифровой среде</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page9">5)</a> Уровень осведомленности граждан о киберугрозах</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page6">6)</a> Уровень цифровой грамотности людей разных возрастных групп</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page7">7)</a> Индекс цифровой грамотности мужчин и женщин по возрасту</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page8">8)</a> Индекс цифровой грамотности в разных регионах России</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page1">9)</a> Средний индекс цифровой грамотности в федеральных округах России</div>
+            <div style='font-size: 22px; font-family: sans-serif; color: var(--text);'>
+                <a style='font-weight: 700;font-size: 22px; font-family: sans-serif; color: var(--link); text-decoration: none;' href="#page10">10)</a> Средний индекс цифровой грамотности в разных странах</div>
+        </div>
+
+           
+
+    </div>
     <div class="page" id="page2">
         <h2 class="title" >Изменение иНДЕКСа ЦИФРОВОЙ ГРАМОТНОСТИ РОССИЯН  <br>С 2018 года (В ПРОЦЕНТНЫХ ПУНКТАХ)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart2"></canvas></div>
+            <canvas id="myChart2"></canvas>  <p style="font-family: sans-serif;">Источник: Аналитический центр НАФИ</p></div>
             <div class="info">
                 <p class="text-content">Индекс цифровой грамотности россиян на момент 2023 года составил 71%, что является наивысшим показателем за весь период с 2018 по 2023 год. За 6 лет показатель увеличился на 19%.</p>
-                <div class="link-container">
-        
-                    <a class='link' style="width: 100%" href="#page3">далее</a>
-                </div>
+              
+                <a class='link' >1</a>
             </div>
         </div>
     </div>
@@ -57,14 +90,12 @@
         <h2 class="title" >Доля населения, обладающего разными уровнями<br> цифровой грамотности (в процентных пунктах)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart3"></canvas></div>
+            <canvas id="myChart3"></canvas>
+            <p style="font-family: sans-serif;">Источник: Аналитический центр НАФИ</p></div>
             <div class="info">
                 <p class="text-content">Большинство россиян (69%) обладают базовым уровнем цифровой грамотности.
                     Продвинутый уровень демонстрируют менее трети (29%) граждан России. Начальный уровень имеют всего 2% россиян.</p>
-                    <div class="link-container">
-                        <a class='link' href="#page2">назад</a>
-                        <a class='link' href="#page4">далее</a>
-                    </div>
+                    <a class='link' >2</a>
             </div>
         </div>
     </div>
@@ -73,15 +104,14 @@
         <h2 class="title" >Оценка осведомлённости по ключевым показателям<br> цифровой грамотности по годам (по шкале от 0 до 10)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart4"></canvas></div>
+            <canvas id="myChart4"></canvas>
+            
+            <p style="font-family: sans-serif;">Источник: Аналитический центр НАФИ</p></div>
             <div class="info">
                 <p class="text-content">Показатели цифровых компетенций и знаний основ цифрового потребления в 2023 году являются наихудшими с 2019 года.
                     Знания цифровой безопасности ни разу не опускались ниже показателя 2019 года. 
                 </p>
-                <div class="link-container">
-                    <a class='link' href="#page3">назад</a>
-                    <a class='link' href="#page5">далее</a>
-                </div>
+                <a class='link' >3</a>
             </div>
         </div>
     </div>
@@ -89,15 +119,13 @@
         <h2 class="title" >Оценка прикладных умений в цифовой среде по годам<br>(по шкале от 0 до 100)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart5"></canvas></div>
+            <canvas id="myChart5"></canvas>
+            <p style="font-family: sans-serif;">Источник: Аналитический центр НАФИ</p></div>
             <div class="info">
                 <p class="text-content">Навыки информационной безопасности, решения проблем в интернете и коммуникативной грамотности
                     существенно увеличились с 2020 года и имеют довольно высокие показатели в последние годы.
                 </p>
-                <div class="link-container">
-                    <a class='link' href="#page4">назад</a>
-                    <a class='link' href="#page9">далее</a>
-                </div>
+                <a class='link' >4</a>
             </div>
         </div>
     </div>
@@ -105,15 +133,13 @@
         <h2 class="title" >уровень осведомленности граждан России о <br> киберугрозах</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart9"></canvas></div>
+            <canvas id="myChart9"></canvas>
+            <p style="font-family: sans-serif;">Источник: Минцифры России</p></div>
             <div class="info">
                 <p class="text-content">Уровень осведомленности граждан России о киберугрозах находится на довольно низком уровне. 
                     Почти половина всех опрошенных не смогли назвать ни одной киберугрозы. Высокой осведомленностью обладают всего 4% опрошенных.
                 </p>
-                <div class="link-container">
-                    <a class='link' href="#page5">назад</a>
-                    <a class='link' href="#page6">далее</a>
-                </div>
+                <a class='link' >5</a>
             </div>
         </div>
     </div>
@@ -121,15 +147,13 @@
         <h2 class="title" >Уровень цифровой грамотности людей разных<br> возрастных групп(в процентных пунктах)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart6"></canvas></div>
+            <canvas id="myChart6"></canvas>
+            <p style="font-family: sans-serif;">Источник: Минцифры России</p></div>
             <div class="info">
                 <p class="text-content">Наилучшими знаниями цифровой грамотности обладают люди от 26 до 35 лет. Чуть менее высоким уровнем владеют люди от 36 до 59 лет. 
                     Наименее грамотными в цифровой среде являются люди старше 60 лет и младше 10 лет.
                 </p>
-                <div class="link-container">
-                    <a class='link' href="#page9">назад</a>
-                    <a class='link' href="#page7">далее</a>
-                </div>
+                <a class='link' >6</a>
             </div>
         </div>
     </div>
@@ -137,14 +161,12 @@
         <h2 class="title" >Средний индекс цифровой грамотности мужчин и<br> женщин по возрасту(в процентных пунктах)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart7"></canvas></div>
+            <canvas id="myChart7"></canvas>
+            <p style="font-family: sans-serif;">Источник: Минцифры России</p></div>
             <div class="info">
                 <p class="text-content">Мужчины в возрасте от 26 до 59 лет обладают более существенными знаниями, чем женщины того же возраста. В остальных возрастных категориях женщины оцениваются на несколько пунктов выше мужчин.</p>
   
-                <div class="link-container">
-                    <a class='link' href="#page6">назад</a>
-                    <a class='link' href="#page8">далее</a>
-                </div>
+                <a class='link' >7</a>
             </div>
         </div>
     </div>
@@ -152,15 +174,13 @@
         <h2 class="title" >Средний индекс цифровой грамотности в регионах <br>России</h2>
         <div class='content'>
             <div class="container">
-            <div style='background-color: blue' id="myChart8"></div></div>
+            <div style='background-color: blue' id="myChart8"></div>
+            <p style="font-family: sans-serif;">Источник: Аналитический центр НАФИ</p></div>
             <div class="info">
                 <p class="text-content">В тройку лучших регионов России по индексу цифровой грамотности вошли Республика Карелия (73.4%), Москва (73.4%) и Астраханская область (72.6%).
                     Наименее высокие результаты у Чеченской Республики (50.1%), Тывы (52.8%) и Ингушетии (53.6%).
                 </p>
-                <div class="link-container">
-                    <a class='link' href="#page7">назад</a>
-                    <a class='link' href="#page1">далее</a>
-                </div>
+                <a class='link' >8</a>
                 
             </div>
         </div>
@@ -170,13 +190,11 @@
             в федеральных <br>округах РОССИИ, 2023 (по шкале от 0 до 10)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="myChart" class="applyScript"></canvas></div>
+            <canvas id="myChart" class="applyScript"></canvas>
+            <p style="font-family: sans-serif;">Источник: Аналитический центр НАФИ</p></div>
             <div class="info">
                 <p class="text-content">Средний индекс цифровой грамотности всех округов России находится на неплохом уровне. Наиболее высокий результат у Северо-западного федерального округа, наименее - у Северо-Кавказского федерального округа.</p>
-                <div class="link-container">
-                    <a class='link' href="#page8">назад</a>
-                    <a class='link' href="#page10">далее</a>
-                </div>
+                <a class='link' >9</a>
                 
             </div>
         </div>
@@ -223,18 +241,23 @@
         <h2 class="title" >Средний показатель индекса цифрового индекса в <br> разных странах мира (по шкале от 0 до 10)</h2>
         <div class='content'>
             <div class="container">
-            <canvas id="canvas"></canvas></div>
+            <canvas id="canvas"></canvas>
+            <p style="font-family: sans-serif;">Источник: DSGI 2021</p></div>
             <div class="info">
                 <p class="text-content">По значению индекса цифровой грамотности среди всех стран Россия находится на 24 месте, такой же показатель у Франции и Омана. 
                     Лидерами по показателю являются Сингапур (7.8), ОАЭ (7.5) и Финляндия (7.5).</p>
-                    <div class="link-container">
-                        <a class='link' style='width:100%' href="#page1">назад</a>
-                        
-                    </div>
+                    <a class='link' >10</a>
             </div>
         </div>
     </div>
+    <div class="page" style='display: flex; flex-direction: column; gap: 10%';>
+        <h2 class="title" style="font-size: 48px; color: var(--text); margin-bottom: 0" >Итоги <br></h2>
+        <p style="font-family: sans-serif; font-size: 30px;">
+            Цифровая грамотность играет все более важную роль в современном мире. В России уровень цифровой грамотности постепенно повышается, однако еще есть немало проблемных областей.<br><br>
+            В целом, осознание важности цифровой грамотности растет, и будущее наполнено надеждой на более осведомленное и безопасное использование цифровых технологий в России.</p>
     
+        </div>
+    </div>
     <script src="scripts/map.js"></script>
 </body>
 </html>
