@@ -184,3 +184,41 @@ var afa = {'Singapore': 7.8,
 'Chad':1.9,
 'Mozambique':1.8,
 'Haiti':1.2}
+
+function scrollDown() {
+  const windowHeight = window.innerHeight; // высота видимой области окна браузера
+  window.scrollBy({
+      top: windowHeight, // пролистываем на высоту видимой области
+      behavior: 'smooth' // плавная прокрутка
+  });
+}
+
+function scrollUp(evt) {
+  evt.preventDefault();
+  const windowHeight = window.innerHeight; // высота видимой области окна браузера
+  window.scrollBy({
+      top: -1 * (windowHeight), // пролистываем на высоту видимой области
+      behavior: 'smooth' // плавная прокрутка
+  });
+}
+
+function noScroll(event) {
+  event.stopImmediatePropagation();
+}
+
+
+// Привязываем функцию к событию клика на, например, кнопку
+document.querySelector('.theme-menu').addEventListener('click', noScroll);
+document.querySelector('#myChart').addEventListener('click', noScroll);
+document.querySelector('#myChart2').addEventListener('click', noScroll);
+document.querySelector('#myChart3').addEventListener('click', noScroll);
+document.querySelector('#myChart4').addEventListener('click', noScroll);
+document.querySelector('#myChart5').addEventListener('click', noScroll);
+document.querySelector('#myChart6').addEventListener('click', noScroll);
+document.querySelector('#myChart7').addEventListener('click', noScroll);
+document.querySelector('#myChart8').addEventListener('click', noScroll);
+document.querySelector('#myChart9').addEventListener('click', noScroll);
+
+document.getElementById('buttonId').addEventListener('click', scrollDown);
+document.getElementById('buttonId').addEventListener('contextmenu', scrollUp);
+
